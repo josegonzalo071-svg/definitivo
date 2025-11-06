@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo Trifusion Technologies</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: #0d1117;
+      color: #e6edf3;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #161b22;
+      color: #58a6ff;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 1.8rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      border-bottom: 2px solid #30363d;
+    }
+    header span {
+      display: block;
+      color: #8b949e;
+      font-size: 1rem;
+      margin-top: 0.3rem;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      background-color: #21262d;
+      border-bottom: 1px solid #30363d;
+      padding: 1rem;
+    }
+    nav a {
+      color: #58a6ff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: #79c0ff;
+      text-decoration: underline;
+    }
+    section {
+      display: none;
+      padding: 2rem;
+    }
+    section.active {
+      display: block;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      background-color: #161b22;
+    }
+    th, td {
+      border: 1px solid #30363d;
+      padding: 0.7rem;
+      text-align: left;
+    }
+    th {
+      background-color: #21262d;
+      color: #58a6ff;
+    }
+    tr:nth-child(even) {
+      background-color: #0d1117;
+    }
+    footer {
+      background-color: #161b22;
+      text-align: center;
+      color: #8b949e;
+      padding: 1rem;
+      border-top: 1px solid #30363d;
+      font-size: 0.9rem;
+    }
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Trifusion Technologies
+    <span>WhatsApp: +1 (829) 872-5163</span>
+  </header>
+
+  <nav>
+    <a href="#" onclick="mostrarSeccion('impresora')">Impresora</a>
+    <a href="#" onclick="mostrarSeccion('monitor')">Monitor</a>
+    <a href="#" onclick="mostrarSeccion('ups')">UPS</a>
+  </nav>
+
+  <section id="impresora" class="active">
+    <h2>Catálogo de Impresoras</h2>
+    <iframe src="CATALOGO_TRIFUSION_DEFINITIVO.xlsm"></iframe>
+  </section>
+
+  <section id="monitor">
+    <h2>Catálogo de Monitores</h2>
+    <iframe src="CATALOGO_TRIFUSION_DEFINITIVO.xlsm"></iframe>
+  </section>
+
+  <section id="ups">
+    <h2>Catálogo de UPS</h2>
+    <iframe src="CATALOGO_TRIFUSION_DEFINITIVO.xlsm"></iframe>
+  </section>
+
+  <footer>
+    © 2025 Trifusion Technologies — Todos los derechos reservados.
+  </footer>
+
+  <script>
+    function mostrarSeccion(id) {
+      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
